@@ -1,0 +1,144 @@
+:root {
+  --pink: #ff3258;
+  --black: #000;
+  --white: #f0e9f2;
+}
+
+/* Reset yang lebih manusiawi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Segoe UI', sans-serif; /* Pake font sistem aja dulu biar aman */
+  line-height: 1.6;
+}
+
+.row {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Nav pake Flexbox */
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 0;
+}
+
+.nav__items {
+  display: flex;
+  gap: 40px; /* Jarak antar menu otomatis */
+}
+
+/* Center Text Hero */
+.header__text-box {
+  flex-grow: 1; /* Ambil sisa ruang */
+  display: flex;
+  align-items: center; /* Tengah vertikal */
+}
+
+.heading-primary {
+  font-size: 5rem;
+  line-height: 1.1;
+}
+
+.btn--pink {
+  background: var(--pink);
+  padding: 12px 30px;
+  display: inline-block;
+  margin-top: 20px;
+  color: white;
+  border-radius: 4px;
+}
+
+
+.row {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.work__boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15rem; /* Jarak antar project biar lega kayak di template asli */
+    margin-top: 5rem;
+}
+
+.work__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+/* Biar rapi di HP (Responsive) */
+@media(max-width: 900px) {
+    .work__box {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+.work__text {
+    flex: 0 0 40%;
+}
+
+.work__image-box {
+    flex: 1.5;
+}
+
+.work__image {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.work__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.work__list li {
+    border: 1px solid var(--pink);
+    padding: 0.5rem 1.5rem;
+    font-size: 1.4rem;
+    color: var(--pink);
+    transition: all 0.3s;
+}
+
+.work__list li:hover {
+    background: var(--pink);
+    color: white;
+}
+
+.btn--pink {
+  background: var(--pink);
+  color: white;
+  padding: 1rem 2.5rem;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid var(--pink);
+  transition: 0.3s;
+  width: fit-content;
+}
+
+.btn--pink:hover {
+  background: transparent;
+  color: var(--pink);
+}

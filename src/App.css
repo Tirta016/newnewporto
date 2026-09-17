@@ -1,0 +1,322 @@
+/* --- Contact Links --- */
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: 2.2rem;
+  max-width: 420px;
+}
+.contact__links a {
+  color: var(--pink);
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+.contact__links a:hover {
+  color: #ff7eb3;
+}
+/* --- Project Card Animation --- */
+.work__box {
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s cubic-bezier(.4,2,.6,1);
+}
+.work__box:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 8px 32px rgba(255,50,88,0.12), 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+
+/* --- Contact Form Styles --- */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 400px;
+  margin: 2.5rem 0 0 0;
+}
+.contact__form input,
+.contact__form textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #232323;
+  color: var(--white);
+  resize: none;
+  transition: border 0.2s;
+}
+.contact__form input:focus,
+.contact__form textarea:focus {
+  border: 1.5px solid var(--pink);
+  outline: none;
+}
+.contact__form button {
+  align-self: flex-end;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  background: var(--pink);
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact__form button:hover {
+  background: #ff7eb3;
+}
+/* --- Footer Styles --- */
+.footer {
+  width: 100%;
+  background: #181818;
+  color: var(--white);
+  padding: 2rem 0 1rem 0;
+  margin-top: 4rem;
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.10);
+}
+.footer__content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.footer__links {
+  display: flex;
+  gap: 2.2rem;
+  font-size: 1.7rem;
+}
+.footer__links a {
+  color: var(--pink);
+  transition: color 0.2s;
+}
+.footer__links a:hover {
+  color: #ff7eb3;
+}
+.footer__copyright {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+@media (max-width: 700px) {
+  .footer__content {
+    padding: 0 1.2rem;
+  }
+  .footer__links {
+    font-size: 1.3rem;
+    gap: 1.2rem;
+  }
+}
+/* --- About Section Layout --- */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+.about__text {
+  max-width: 420px;
+  line-height: 1.7;
+  text-align: left;
+}
+@media (max-width: 700px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about__text {
+    text-align: center;
+  }
+}
+/* --- About Avatar Styles --- */
+.about__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  border: 3px solid var(--pink);
+  background: var(--white);
+}
+@media (max-width: 700px) {
+  .about__avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+/* --- Navbar Styles --- */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+  z-index: 100;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+.navbar__logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--pink);
+  letter-spacing: 1px;
+}
+.navbar__links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.navbar__links li button {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar__links li button:hover {
+  background: var(--pink);
+  color: var(--white);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.2rem;
+  }
+  .navbar__links {
+    gap: 1.2rem;
+    margin-top: 0.7rem;
+  }
+}
+
+:root{
+  --pink: #ff3258;
+  --black: #000;
+  --white: #f0e9f2;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+.row{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 5.5rem; /* space for navbar */
+}
+
+.about_text{
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+.work__boxes{
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  margin-top: 3rem;
+}
+
+.work__box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+@media(max-width: 900px){
+  .work__box{
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+}
+/* --- Section Title Styling --- */
+.section-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--pink);
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--pink), #ff7eb3);
+  border-radius: 2px;
+  margin: 0.5rem auto 0 auto;
+  transition: width 0.3s;
+}
+
+.work__text{
+  /* flex: 0 0 40%; */
+flex: 1;
+text-align: left;
+display: flex;
+flex-direction: column;
+}
+
+.work__image-box{
+  flex: 1.5;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.work__image{
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* width: 100%; */
+  /* border-radius: 4px; */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+
+}
+.work__list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  margin: 2rem 0;
+}
+.work__list li{
+  border: 1px solid var(--pink);
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  color: var(--pink);
+  transition: all 0.3s ease;
+}
+
+.work__list li:hover {
+    background: var(--pink);
+    color: white;
+}
